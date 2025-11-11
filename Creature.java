@@ -15,7 +15,7 @@ public abstract class Creature
 {
     private int str;        // The strength of this creature
     private int max_hp;     // The maximum hit points the creature can have (used if healing enabled)
-    private int hp;         // the current numberof hit points the creature has
+    private int hp;         // The current number of hit points the creature has
     
   
     
@@ -39,8 +39,10 @@ public abstract class Creature
      * @return a value between 1 and str to be used to cause damage to another creature
      */
     public int attack(){
-        // TODO: implement a damage method
-        return 0;
+        int damageToReturn;
+        damageToReturn = Randomizer.nextInt(str);
+        
+        return damageToReturn;
     }
     
     
@@ -49,8 +51,7 @@ public abstract class Creature
      * @return true when current hit point level is greater than zero
      */
     public boolean isAlive() {
-        // TODO: implement a method to report if the creature yet lives
-        return false; //change this
+        return (hp > 0);
     }
     
     /**
@@ -58,8 +59,14 @@ public abstract class Creature
      * @return true when current hit point level is less than or equal to zero
      */
     public boolean isKnockedOut() {
-        //TODO: implement a method to report if the creature has been killed
-        return false; //change this
+        boolean unconscious;
+        if (hp <= 0) {
+            unconscious = true;
+        } else {
+            unconscious = false;
+        }
+
+        return unconscious;
     }
     
     
@@ -69,7 +76,7 @@ public abstract class Creature
      * @param damage value to remove from hit point count
      */
     public void takeDamage(int damage) {
-        // TODO: implement this
+        hp = hp - damage;
     }
     
 }
