@@ -8,7 +8,8 @@
  * damage delivered based on the creature's strength (1 to str) 
  * 
  * @author Crosbie
- * @version 2025-04 v1.0
+ * @author Christian Gorosica
+ * @version 2025.11.16
  */
 // we will learn what the abstract keyword does in a later chapter
 public abstract class Creature
