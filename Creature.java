@@ -80,4 +80,12 @@ public abstract class Creature
         hp = hp - damage;
     }
     
+    /**
+     * getHp reports the number of health points a creature has remaining
+     * 
+     * @return a value for the creature's current health point count
+     */
+    public int getHp() {
+        return hp;
+    }
 }
