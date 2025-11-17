@@ -32,7 +32,7 @@ public abstract class Demon extends Creature
         int damageDealt = super.attack();
         
         if (Randomizer.nextInt(20) == 1) {
-            damageDealt = damageDealt + 50;
+            damageDealt += 50;
         }
         
         return damageDealt;
